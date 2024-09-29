@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+@use './assets/themes/default-theme.scss';
+@use './assets/themes/blue-theme.scss';
+@use './assets/themes/red-theme.scss';
+@use './assets/themes/yellow-theme.scss';
+
+body {
+  @include mat.all-component-themes(default-theme.$light-theme);
+}
+
+html[theme='default'] {
+  body[mode='dark'] {
+    @include mat.all-component-colors(default-theme.$dark-theme);
+  }
+}
+
+html[theme='blue'] {
+  body {
+    @include mat.all-component-colors(blue-theme.$light-theme);
+  }
+
+  body[mode='dark'] {
+    @include mat.all-component-colors(blue-theme.$dark-theme);
+  }
+}
+
+html[theme='red'] {
+  body {
+    @include mat.all-component-colors(red-theme.$light-theme);
+  }
+
+  body[mode='dark'] {
+    @include mat.all-component-colors(red-theme.$dark-theme);
+  }
+}
+
+html[theme='yellow'] {
+  body {
+    @include mat.all-component-colors(yellow-theme.$light-theme);
+  }
+
+  body[mode='dark'] {
+    @include mat.all-component-colors(yellow-theme.$dark-theme);
+  }
+}
