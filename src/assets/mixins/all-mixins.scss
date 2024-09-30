@@ -1,0 +1,5 @@
+@use './my-mixin.scss' as mxn;
+
+@mixin my-all-mixins($theme) {
+  @include mxn.apply-my-layout-theme($theme);
+}

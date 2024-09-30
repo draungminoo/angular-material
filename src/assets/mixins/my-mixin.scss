@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+
+@mixin apply-my-layout-theme($theme) {
+  @if (mat.get-theme-type($theme) == 'dark') {
+    .my-layout {
+      color: mat.get-theme-color($theme, primary, 100);
+      background: mat.get-theme-color($theme, primary, 10);
+    }
+  } @else {
+    .my-layout {
+      color: mat.get-theme-color($theme, primary, 10);
+      background: mat.get-theme-color($theme, primary, 90);
+    }
+  }
+}
