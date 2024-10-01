@@ -1,0 +1,15 @@
+.table-pages-holder {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 16px;
+
+  button {
+    margin: 0px 4px;
+  }
+
+  button[active='true'] {
+    background: dodgerblue;
+    color: white;
+  }
+}

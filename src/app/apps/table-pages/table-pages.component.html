@@ -1,0 +1,11 @@
+<div class="table-pages-holder">
+  @for (no of buttonArray; track $index) {
+    <button
+      mat-icon-button
+      [attr.active]="$index + 1 == active"
+      (click)="pageChanged($index + 1)"
+    >
+      {{ $index + 1 }}
+    </button>
+  }
+</div>

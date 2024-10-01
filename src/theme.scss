@@ -3,6 +3,7 @@
 @use './assets/themes/blue-theme.scss';
 @use './assets/themes/red-theme.scss';
 @use './assets/themes/yellow-theme.scss';
+@use './assets/themes/pink-theme.scss';
 
 @use './assets/mixins/all-mixins.scss' as all;
 
@@ -66,6 +67,22 @@ html[theme='yellow'] {
   body[mode='dark'] {
     @include mat.all-component-colors(yellow-theme.$dark-theme);
     @include all.my-all-mixins(yellow-theme.$dark-theme);
+  }
+}
+
+// #endregion
+
+// Pink theme
+// #region
+html[theme='pink'] {
+  body {
+    @include mat.all-component-colors(pink-theme.$light-theme);
+    @include all.my-all-mixins(pink-theme.$light-theme);
+  }
+
+  body[mode='dark'] {
+    @include mat.all-component-colors(pink-theme.$dark-theme);
+    @include all.my-all-mixins(pink-theme.$dark-theme);
   }
 }
 

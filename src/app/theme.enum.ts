@@ -3,4 +3,5 @@ export enum ThemeEnum {
   BLUE = 'blue',
   RED = 'red',
   YELLOW = 'yellow',
+  PINK = 'pink',
 }

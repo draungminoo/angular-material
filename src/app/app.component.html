@@ -1,4 +1,4 @@
-<div class="action">
+<!-- <div class="action">
   <button mat-raised-button (click)="switchTheme(themeEnum.DEFAULT)">
     DEFAULT
   </button>
@@ -11,11 +11,36 @@
     YELLOW
   </button>
 
+  <button mat-raised-button (click)="switchTheme(themeEnum.PINK)">PINK</button>
+
   <button mat-raised-button (click)="switchMode()">MODE: {{ mode }}</button>
 </div>
 
-<router-outlet />
+<div class="my-layout">hello</div>
 
-<div class="my-layout">
-  hello
-</div>
+<br />
+
+<app-button></app-button>
+
+<br />
+
+<mat-form-field style="margin: 8px" appearance="outline">
+  <mat-label>Search</mat-label>
+
+  <input type="text" matInput placeholder="Search" [value]="activePage" />
+</mat-form-field>
+
+<br />
+ -->
+
+<h1>App Frame</h1>
+
+<p>Page No: {{ activePage }}</p>
+
+<app-table-pages
+  [active]="activePage"
+  (onPageChanged)="onPageChanged($event)"
+></app-table-pages>
+
+<p>This is router outlet.</p>
+<router-outlet />
